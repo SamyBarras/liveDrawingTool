@@ -6,5 +6,6 @@
 	"CTRL/CMD + s > save presets",
 	"CTRL/CMD + SHIFT + S > save image",
 	"CTRL/CMD + z > undo",
-	"CTRL/CMD + SHIFT + Z > redo"
+	"CTRL/CMD + SHIFT + Z > redo",
+	"$ > show / hide gabarit in syphon output"
 ]
