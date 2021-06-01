@@ -34,7 +34,7 @@
   
 */
 
-boolean fullscreen = true;
+boolean fullscreen = false;
 boolean drawCursorPos = false;
 boolean gomme  = false;
 boolean help  = false;
@@ -77,10 +77,12 @@ void setup() {
     JSONObject _s = _scenes.getJSONObject(s);
     Scene d = new Scene(_s);
     println(d.id + " loaded");
+    
     if (!d.gab.isEmpty()) {
       scenes.add(d);
       println("--> gabarit file : " + d.gabFile);
     }
+    
   }
   for (int t=0; t < _tools.size(); t++) {
     JSONObject _t = _tools.getJSONObject(t);
@@ -161,7 +163,7 @@ void draw() {
   strokeWeight(1);
   fill(255,0,0);
   text(int(frameRate)+"fps", 40, 30);
-  text("layer :   " + _activeScene.id, 40, 60);
+  text("layer :   " + _activeScene.gab, 40, 60);
   text("resolution :   " + width + " / " + height, 40, 100);
 
   if (help == true) {

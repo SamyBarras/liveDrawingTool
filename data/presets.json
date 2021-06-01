@@ -12,7 +12,7 @@
       "default": true,
       "penSize": 9,
       "eraserSize": 5,
-      "name": "scene-1",
+      "name": "1",
       "gab": "20210531_GAB1_01",
       "key": "a"
     },
@@ -27,7 +27,7 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-2",
+      "name": "2",
       "gab": "",
       "key": "z"
     },
@@ -42,8 +42,8 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-3",
-      "gab": "",
+      "name": "3",
+      "gab": "20210531_GAB1_01",
       "key": "e"
     },
     {
@@ -57,7 +57,7 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-4",
+      "name": "4",
       "gab": "20210531_GAB2_01",
       "key": "r"
     },
@@ -72,7 +72,7 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-5",
+      "name": "5",
       "gab": "",
       "key": "t"
     },
@@ -87,7 +87,7 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-6",
+      "name": "6",
       "gab": "20210531_GAB3_01",
       "key": "y"
     },
@@ -102,7 +102,7 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-7",
+      "name": "7",
       "gab": "",
       "key": "u"
     },
@@ -117,13 +117,13 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-8",
-      "gab": "20210531_GAB4_01",
+      "name": "8",
+      "gab": "",
       "key": "i"
     },
     {
       "button": {
-        "num": 48,
+        "num": 32,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -132,13 +132,13 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-9",
-      "gab": "",
+      "name": "9",
+      "gab": "20210531_GAB4_01",
       "key": "o"
     },
     {
       "button": {
-        "num": 49,
+        "num": 33,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -147,13 +147,13 @@
       },
       "penSize": 2,
       "eraserSize": 5,
-      "name": "scene-10",
+      "name": "10",
       "gab": "20210531_GAB5_01",
       "key": "p"
     },
     {
       "button": {
-        "num": 50,
+        "num": 34,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -168,7 +168,7 @@
     },
     {
       "button": {
-        "num": 51,
+        "num": 35,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -299,6 +299,34 @@
       "max": 120,
       "name": "eraser_size",
       "type": "fader"
+    },
+    {
+      "button": {
+        "num": 51,
+        "channel": 0,
+        "error": 4,
+        "off": 0,
+        "status": 144,
+        "on": 2
+      },
+      "default": false,
+      "name": "bus-pause",
+      "type": "bus-ctrl",
+      "key": "p"
+    },
+    {
+      "button": {
+        "num": 43,
+        "channel": 0,
+        "error": 4,
+        "off": 0,
+        "status": 144,
+        "on": 2
+      },
+      "default": false,
+      "name": "bus-play",
+      "type": "bus-ctrl",
+      "key": "p"
     }
   ]
 }
