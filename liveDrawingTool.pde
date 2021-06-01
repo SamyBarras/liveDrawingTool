@@ -5,7 +5,13 @@
   
   For Compagnie Za!
   
-  v2.3
+  v2.4.1
+  UPDATES 2.4.1 :
+  - rewriting of scene creation to reduce loading time
+  - added "gabarit" entry in presets.json, so we can name gabarit and use versionning
+  - modified loading of gabarit files
+  - global speed improvement
+
   UPDATES 2.3 :
   - clean and update part of code for syphon output with mirrored image
   - button to show / hide scenes gabarit into syphon output (it helps for projection mapping !)
