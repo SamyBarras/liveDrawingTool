@@ -1,0 +1,304 @@
+{
+  "scenes": [
+    {
+      "button": {
+        "num": 56,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "default": true,
+      "penSize": 9,
+      "eraserSize": 5,
+      "name": "scene-1",
+      "gab": "20210531_GAB1_01",
+      "key": "a"
+    },
+    {
+      "button": {
+        "num": 57,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-2",
+      "gab": "",
+      "key": "z"
+    },
+    {
+      "button": {
+        "num": 58,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-3",
+      "gab": "",
+      "key": "e"
+    },
+    {
+      "button": {
+        "num": 59,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-4",
+      "gab": "20210531_GAB2_01",
+      "key": "r"
+    },
+    {
+      "button": {
+        "num": 60,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-5",
+      "gab": "",
+      "key": "t"
+    },
+    {
+      "button": {
+        "num": 61,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-6",
+      "gab": "20210531_GAB3_01",
+      "key": "y"
+    },
+    {
+      "button": {
+        "num": 62,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-7",
+      "gab": "",
+      "key": "u"
+    },
+    {
+      "button": {
+        "num": 63,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-8",
+      "gab": "20210531_GAB4_01",
+      "key": "i"
+    },
+    {
+      "button": {
+        "num": 48,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-9",
+      "gab": "",
+      "key": "o"
+    },
+    {
+      "button": {
+        "num": 49,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 5,
+      "name": "scene-10",
+      "gab": "20210531_GAB5_01",
+      "key": "p"
+    },
+    {
+      "button": {
+        "num": 50,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-11",
+      "gab": "",
+      "key": "q"
+    },
+    {
+      "button": {
+        "num": 51,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "scene-12",
+      "gab": "",
+      "key": "s"
+    }
+  ],
+  "tools": [
+    {
+      "button": {
+        "num": 0,
+        "channel": 0,
+        "error": 4,
+        "off": 3,
+        "status": 144,
+        "on": 6
+      },
+      "default": false,
+      "name": "show-gab",
+      "type": "show-gab",
+      "key": "$"
+    },
+    {
+      "button": {
+        "num": 82,
+        "channel": 0,
+        "error": 4,
+        "off": 1,
+        "status": 144,
+        "on": 1
+      },
+      "default": false,
+      "name": "save_button",
+      "type": "save"
+    },
+    {
+      "button": {
+        "num": 83,
+        "channel": 0,
+        "error": 4,
+        "off": 1,
+        "status": 144,
+        "on": 1
+      },
+      "default": false,
+      "name": "clear_button",
+      "type": "clear"
+    },
+    {
+      "button": {
+        "num": 65,
+        "channel": 0,
+        "error": 4,
+        "off": 1,
+        "status": 144,
+        "on": 2
+      },
+      "default": true,
+      "name": "pen_button",
+      "type": "tool"
+    },
+    {
+      "button": {
+        "num": 66,
+        "channel": 0,
+        "error": 4,
+        "off": 1,
+        "status": 144,
+        "on": 2
+      },
+      "name": "eraser_button",
+      "type": "tool"
+    },
+    {
+      "button": {
+        "num": 2,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 5
+      },
+      "name": "ctrl-z",
+      "type": "step-eraser"
+    },
+    {
+      "button": {
+        "num": 1,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 5
+      },
+      "name": "ctrl-shift-z",
+      "type": "step-eraser"
+    },
+    {
+      "button": {
+        "num": 49,
+        "channel": 0,
+        "error": 4,
+        "off": 0,
+        "status": 176,
+        "on": 1
+      },
+      "min": 1,
+      "max": 15,
+      "name": "pen_size",
+      "type": "fader"
+    },
+    {
+      "button": {
+        "num": 50,
+        "channel": 0,
+        "error": 4,
+        "off": 0,
+        "status": 176,
+        "on": 1
+      },
+      "min": 5,
+      "max": 120,
+      "name": "eraser_size",
+      "type": "fader"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+	"h > show / hide this help",
+	"m > show / hide mouse lines",
+	"g > switch tool (pen / eraser)",
+	"c > clear active layer",
+	"CTRL/CMD + s > save presets",
+	"CTRL/CMD + SHIFT + S > save image",
+	"CTRL/CMD + z > undo",
+	"CTRL/CMD + SHIFT + Z > redo"
+]
