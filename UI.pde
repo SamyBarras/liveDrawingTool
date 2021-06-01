@@ -65,6 +65,9 @@ void keyPressed() {
       case '$' :
         outputGab = !outputGab;
         break;
+      case 'm' :
+        drawCursorPos = !drawCursorPos;
+        break;
     }
   }
 }
