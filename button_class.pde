@@ -56,6 +56,7 @@ class Button {
       for (Scene d : scenes){
         if (d.id.matches(id)) {
           _activeScene = d;
+          _activeScene.gabDrawer();
           break;
         }
       }

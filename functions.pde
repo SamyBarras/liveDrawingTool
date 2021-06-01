@@ -3,7 +3,7 @@
 */
 
 void saveScene() {
-  _activeScene.canvas.save("data/" + _activeScene.id+"_"+year()+month()+day()+hour()+minute()+".jpg");
+  _activeScene.canvas.save("data/images/" + _activeScene.id+"_"+year()+month()+day()+hour()+minute()+".jpg");
   println("Image Saved for "+_activeScene.id);
 }
 

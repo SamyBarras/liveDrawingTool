@@ -42,9 +42,9 @@ void keyPressed() {
     for (Scene d : scenes){
       if (d.k == key) {
         _activeScene = d;
+        _activeScene.gabDrawer();
         break;
       }
-      
     }
    switch(key) {
       case 'g':
@@ -63,11 +63,10 @@ void keyPressed() {
         println("animate ?");
         break;
       case '$' :
-       outputGab = !outputGab;
+        outputGab = !outputGab;
         break;
     }
   }
-  
 }
 
 void keyReleased() {
@@ -92,7 +91,6 @@ void mousePressed() {
   }
   if (gomme == false) {
     if (_activeScene.animate == false) {
-      //
       _activeScene.lastShape = createShape();
     }
   }

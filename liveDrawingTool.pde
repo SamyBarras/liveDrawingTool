@@ -28,6 +28,7 @@
   
 */
 
+boolean fullscreen = true;
 boolean drawCursorPos = false;
 boolean gomme  = false;
 boolean help  = false;
@@ -44,14 +45,14 @@ JSONObject presets;
 JSONArray _tools, _scenes;
 //
 void settings() {
-  //size(1280, 720, P3D);
-  fullScreen(P2D);
+  if (fullscreen == false) size(1280, 720, P3D);
+  else fullScreen(P2D);
   noSmooth();
 }
 //
 void setup() {
   //
-  frameRate(24);
+  frameRate(30);
   blendMode(ADD);
   background(0);
   //MidiBus.list();
@@ -72,7 +73,7 @@ void setup() {
     println(d.id + " loaded");
     if (!d.gab.isEmpty()) {
       scenes.add(d);
-      println("gabarit file : " + d.gabFile);
+      println("--> gabarit file : " + d.gabFile);
     }
   }
   for (int t=0; t < _tools.size(); t++) {
@@ -89,10 +90,18 @@ void setup() {
       maxEraserSize = _t.getInt("max");
     }
   }
-  syOutput = createGraphics(width,height);
+
+  syOutput = createGraphics(width, height);
   if (syphonOutput == true) {
     server = new SyphonServer(this, "Za! - Syphon");
   }
+
+  while(_activeScene.gabarit.width <= 0) {
+    print(".");
+  }
+  println();
+  if (_activeScene.gabarit.width > 0) _activeScene.gabDrawer();
+  println("ready");
 }
 
 //////////////Draw//////////////
@@ -100,27 +109,46 @@ void draw() {
   background(0);
   /* -- */
   // draw active scene layer
-  _activeScene.gabDrawer();
-  image(_activeScene.gabCanvas,0,0); 
-  _activeScene.drawer();  
-  image(_activeScene.canvas,0,0); 
-  // syphon output
-  
-  if (syphonOutput == true) {
-    PImage output;
-    // we store corresponding canvas in new clean PImage
-    if (outputGab == true) output = _activeScene.gabCanvas.copy();
-    else output = _activeScene.canvas.copy();
-    // flip image --> syphon is flipping image so we do have to correct that
-    PImage mirror = createImage(width, height, RGB);       // make a empty image half size            
-    for (int y = 0; y < height; y++) {
-      for (int x = 0; x < width; x++) {
-        mirror.set(x, output.height-y-1, output.get(x,y));
+  if (_activeScene.hasGab) {
+    // if active scene has gabarit, it means it has live drawing, so we draw and output to syphon
+    image(_activeScene.gabCanvas, 0, 0);
+    _activeScene.drawer();
+    image(_activeScene.canvas,0,0);
+    // syphon output  
+    if (syphonOutput == true) {
+      PImage output;
+      // we store corresponding canvas in new clean PImage
+      if (outputGab == true) output = _activeScene.gabCanvas.copy();
+      else output = _activeScene.canvas.copy();
+      // flip image --> syphon is flipping image so we do have to correct that
+      PImage mirror = createImage(width, height, RGB);       // make a empty image half size            
+      for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+          mirror.set(x, output.height-y-1, output.get(x,y));
+        }
       }
+      server.sendImage(mirror);
     }
-    server.sendImage(mirror);
+    // cursor and tool visibility
+    if (gomme == true) {
+      // eraser mode
+      noCursor();
+      fill(255,0,0);  
+      stroke(125,100);
+      strokeWeight(1);
+      ellipse(mouseX, mouseY, _activeScene.eraserSize, _activeScene.eraserSize);
+      text("Gomme / "+ _activeScene.eraserSize, 40, 80);
+    }
+    else {
+      // pen mode
+      cursor(CROSS);
+      fill(255);
+      stroke(_activeScene._penColor, 125);
+      strokeWeight(1);
+      ellipse(mouseX, mouseY, _activeScene.penSize, _activeScene.penSize);
+      text("Stylo / " + _activeScene.penSize, 40, 80);
+    }
   }
-  
   // show drawing canvas to artist 
   // infos and user tools
   stroke(255);
@@ -128,37 +156,20 @@ void draw() {
   fill(255,0,0);
   text(int(frameRate)+"fps", 40, 30);
   text("layer :   " + _activeScene.id, 40, 60);
-  if (gomme) text("Gomme / "+ _activeScene.eraserSize, 40, 80);
-  else text("Stylo / " + _activeScene.penSize, 40, 80);
-    
+  text("resolution :   " + width + " / " + height, 40, 100);
+
   if (help == true) {
     // show help :
-    float y = 120;
+    float y = 130;
     JSONArray help = loadJSONArray("data/help.json");  // help is loaded from json file
     text("help : ", 40, y);
     for (int o = 0; o < help.size(); o++){
       text(help.getString(o), 40, y+(o+1)*20);
     }
   }
+
   if (drawCursorPos == true) {
     line(0, mouseY, width, mouseY); // y
     line(mouseX, 0, mouseX, height); // x
-  }
-  // cursor and tool visibility
-  if (gomme == true) {
-    // eraser mode
-    noCursor();
-    fill(255,0,0);  
-    stroke(125,100);
-    strokeWeight(1);
-    ellipse(mouseX, mouseY, _activeScene.eraserSize, _activeScene.eraserSize);
-  }
-  else {
-    // pen mode
-    cursor(CROSS);
-    fill(255);
-    stroke(_activeScene._penColor, 125);
-    strokeWeight(1);
-    ellipse(mouseX, mouseY, _activeScene.penSize, _activeScene.penSize);
   }
 } 
