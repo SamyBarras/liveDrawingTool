@@ -11,15 +11,15 @@ Scene _activeScene;
 
 class Scene {  
   JSONObject preset;
-  PGraphics canvas, animCanvas, gabCanvas;
+  PGraphics canvas, animCanvas, gabCanvas, bgCanvas;
   int penSize, eraserSize;
-  String id, hex, gab;
+  String id, hex, gab, bg;
   color _penColor;
   color penColor;
   char k;
-  boolean isDefault, isActive, hasGab;
-  PImage gabarit;
-  File gabFile;
+  boolean isDefault, isActive, hasGab, hasBG;
+  PImage gabarit, background;
+  File gabFile, bgFile;
   PGraphics asset;
   Undo undo;
   Button butt;
@@ -32,12 +32,24 @@ class Scene {
     preset = _preset;
     id = _preset.getString("name");
     gab = _preset.getString("gab");
+    bg = _preset.getString("bg");
     // setup button linked to this scene
     butt = new Button (preset);
     butt.type = "scene";
     buttons.add(butt);
-    k = preset.getString("key").charAt(0);
 
+    /*
+    // the use of keyboard button for Scenes is disabled if this block is commented
+    try {
+      _k = preset.getString("key")
+      if (!_k.isEmpty()) k = _k.charAt(0);
+      else k='N';
+      println(String(k));
+    }
+    catch (Exception e){
+      k = '';
+    }
+    */
     try {
       if (preset.getBoolean("default") == true) {
         _activeScene = this;
@@ -60,6 +72,17 @@ class Scene {
       }
     }
     else { hasGab = false; }
+
+    if (!bg.isEmpty()) {
+      hasBG = true;
+      String bgPath = "backgrounds/" + bg;
+      bgFile = new File(dataPath(bgPath));
+      if (bgFile.exists()) { background = requestImage(bgPath); }
+      else {
+        println("ERROR : " + bg +" --> file not found !");
+      }
+    }
+    else { hasBG = false; }
 
     if (hasGab) {
       // has a gabarit file, so it is a scene with drawing
@@ -86,6 +109,10 @@ class Scene {
       if (gabarit.width == 0) println("WAIT : template file for " + id + " is not ready...");
       else if (gabarit.width == -1)  println("ERR : error while loading template file for " + id + " !!");
       else gabCanvas.image(gabarit, 0, 0, width, height);
+    }
+    if (hasBG && background.width > 0) {
+      gabCanvas.tint(0, 153, 204, 127);
+      gabCanvas.image(background,0,0, width, height);
     }
     gabCanvas.endDraw();
   }
@@ -215,7 +242,5 @@ class Scene {
       canvas.endDraw();
     }
   }
-  // ----------- MIDI functions ----------//
-  
   //------------ end of class drawing --------------------//
 }

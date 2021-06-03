@@ -1,0 +1,30 @@
+UPDATES 2.4.2 :
+  - added osc control of madmapper, and launching of first mapping column at startup
+  - added optional use of background image for live drawing
+
+UPDATES 2.4.1 :
+  - rewriting of scene creation to reduce loading time
+  - added "gabarit" entry in presets.json, so we can name gabarit and use versionning
+  - modified loading of gabarit files
+  - global speed improvement
+
+UPDATES 2.3 :
+  - clean and update part of code for syphon output with mirrored image
+  - button to show / hide scenes gabarit into syphon output (it helps for projection mapping !)
+  - pen and eraser size mapped values to Akai Midi
+  
+UPDATES 2.2 :
+  - implementation of scenes and image template
+  - end of presets for pen_color 
+  - asynchronous loading for template image files
+  
+UPDATES 2.1 :
+  - implementation of "AKAI APC mini" Pad for external control of sketch
+  - control pad's buttons colors (lights) (madmapper & processing)
+  
+UPDATES 2.0 :
+  - presets for scenes including pen color and size, eraser size, layers
+  - undo / redo option for each layer / drawing
+  - external files for presets and help
+  - adapted for app exported version (data dir)
+  

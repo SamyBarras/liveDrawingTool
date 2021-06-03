@@ -14,6 +14,7 @@
       "eraserSize": 5,
       "name": "1",
       "gab": "20210531_GAB1_01",
+      "bg" : "ville.jpg",
       "key": "a"
     },
     {
@@ -29,6 +30,7 @@
       "eraserSize": 20,
       "name": "2",
       "gab": "",
+      "bg" : "",
       "key": "z"
     },
     {
@@ -44,6 +46,7 @@
       "eraserSize": 20,
       "name": "3",
       "gab": "20210531_GAB1_01",
+      "bg" : "",
       "key": "e"
     },
     {
@@ -59,22 +62,8 @@
       "eraserSize": 20,
       "name": "4",
       "gab": "20210531_GAB2_01",
+      "bg" : "",
       "key": "r"
-    },
-    {
-      "button": {
-        "num": 60,
-        "channel": 0,
-        "error": 4,
-        "off": 5,
-        "status": 144,
-        "on": 1
-      },
-      "penSize": 2,
-      "eraserSize": 20,
-      "name": "5",
-      "gab": "",
-      "key": "t"
     },
     {
       "button": {
@@ -87,9 +76,10 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "6",
-      "gab": "20210531_GAB3_01",
-      "key": "y"
+      "name": "51",
+      "gab": "",
+      "bg" : "",
+      "key": ""
     },
     {
       "button": {
@@ -102,9 +92,10 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "7",
+      "name": "52",
       "gab": "",
-      "key": "u"
+      "bg" : "",
+      "key": ""
     },
     {
       "button": {
@@ -117,13 +108,206 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "name": "53",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 53,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "54",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 54,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "55",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 55,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "56",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 45,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "57",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 46,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "58",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 47,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "59",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 37,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "510",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 38,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "511",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 39,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "512",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 16,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "6",
+      "gab": "20210531_GAB3_01",
+      "bg" : "",
+      "key": "y"
+    },
+    {
+      "button": {
+        "num": 17,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "7",
+      "gab": "",
+      "bg" : "",
+      "key": "u"
+    },
+    {
+      "button": {
+        "num": 18,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
       "name": "8",
       "gab": "",
+      "bg" : "",
       "key": "i"
     },
     {
       "button": {
-        "num": 32,
+        "num": 19,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -134,11 +318,12 @@
       "eraserSize": 20,
       "name": "9",
       "gab": "20210531_GAB4_01",
+      "bg" : "",
       "key": "o"
     },
     {
       "button": {
-        "num": 33,
+        "num": 20,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -149,11 +334,12 @@
       "eraserSize": 5,
       "name": "10",
       "gab": "20210531_GAB5_01",
+      "bg" : "",
       "key": "p"
     },
     {
       "button": {
-        "num": 34,
+        "num": 21,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -162,13 +348,14 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-11",
+      "name": "11",
       "gab": "",
+      "bg" : "",
       "key": "q"
     },
     {
       "button": {
-        "num": 35,
+        "num": 22,
         "channel": 0,
         "error": 4,
         "off": 5,
@@ -177,8 +364,25 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "scene-12",
+      "name": "12",
       "gab": "",
+      "bg" : "",
+      "key": "s"
+    },
+    {
+      "button": {
+        "num": 23,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "13",
+      "gab": "",
+      "bg" : "",
       "key": "s"
     }
   ],

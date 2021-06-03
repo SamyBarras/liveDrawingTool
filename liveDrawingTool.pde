@@ -5,33 +5,7 @@
   
   For Compagnie Za!
   
-  v2.4.1
-  UPDATES 2.4.1 :
-  - rewriting of scene creation to reduce loading time
-  - added "gabarit" entry in presets.json, so we can name gabarit and use versionning
-  - modified loading of gabarit files
-  - global speed improvement
-
-  UPDATES 2.3 :
-  - clean and update part of code for syphon output with mirrored image
-  - button to show / hide scenes gabarit into syphon output (it helps for projection mapping !)
-  - pen and eraser size mapped values to Akai Midi
-  
-  UPDATES 2.2 :
-  - implementation of scenes and image template
-  - end of presets for pen_color 
-  - asynchronous loading for template image files
-  
-  UPDATES 2.1 :
-  - implementation of "AKAI APC mini" Pad for external control of sketch
-  - control pad's buttons colors (lights) (madmapper & processing)
-  
-  UPDATES 2.0 :
-  - presets for scenes including pen color and size, eraser size, layers
-  - undo / redo option for each layer / drawing
-  - external files for presets and help
-  - adapted for app exported version (data dir)
-  
+  v2.4.2
 */
 
 boolean fullscreen = false;
@@ -40,25 +14,30 @@ boolean gomme  = false;
 boolean help  = false;
 boolean outputGab = false;
 PGraphics gab, syOutput;
+PImage output;
 int minPenSize, maxPenSize, minEraserSize, maxEraserSize;
 // syphon
 boolean syphonOutput = true;
 import codeanticode.syphon.*;
 SyphonServer server;
-
+// OSC
+import netP5.*;
+import oscP5.*;
+OscP5 oscP5;
+NetAddress myRemoteLocation;
 //
 JSONObject presets;
 JSONArray _tools, _scenes;
 //
 void settings() {
-  if (fullscreen == false) size(1280, 720, P3D);
+  if (fullscreen == false) size(1280, 720, P2D);
   else fullScreen(P2D);
-  noSmooth();
+  //noSmooth();
 }
 //
 void setup() {
   //
-  frameRate(30);
+  frameRate(60);
   blendMode(ADD);
   background(0);
   //MidiBus.list();
@@ -77,12 +56,10 @@ void setup() {
     JSONObject _s = _scenes.getJSONObject(s);
     Scene d = new Scene(_s);
     println(d.id + " loaded");
-    
     if (!d.gab.isEmpty()) {
       scenes.add(d);
       println("--> gabarit file : " + d.gabFile);
     }
-    
   }
   for (int t=0; t < _tools.size(); t++) {
     JSONObject _t = _tools.getJSONObject(t);
@@ -108,8 +85,18 @@ void setup() {
     print(".");
   }
   println();
-  if (_activeScene.gabarit.width > 0) _activeScene.gabDrawer();
-  println("ready");
+  if (_activeScene.gabarit.width > 0) {
+    _activeScene.gabDrawer();
+    println("ready");
+  }
+
+  
+  oscP5 = new OscP5(this, 3000);
+  myRemoteLocation = new NetAddress("127.0.0.1", 8000);
+  //
+  OscMessage msg = new OscMessage("/cues/Bank-1/columns/1"); // direct control to MadMapper --> go to column 1 
+  //msg.add("1");
+  oscP5.send(msg,myRemoteLocation);
 }
 
 //////////////Draw//////////////
@@ -124,9 +111,14 @@ void draw() {
     image(_activeScene.canvas,0,0);
     // syphon output  
     if (syphonOutput == true) {
-      PImage output;
       // we store corresponding canvas in new clean PImage
-      if (outputGab == true) output = _activeScene.gabCanvas.copy();
+      if (outputGab == true) {
+        output = _activeScene.gabCanvas.copy();
+        strokeWeight(1);
+        stroke(255,255,0);
+        line(0,0,width,height);
+        line(width,0, 0, height);
+      }
       else output = _activeScene.canvas.copy();
       // flip image --> syphon is flipping image so we do have to correct that
       PImage mirror = createImage(width, height, RGB);       // make a empty image half size            
@@ -145,7 +137,7 @@ void draw() {
       stroke(125,100);
       strokeWeight(1);
       ellipse(mouseX, mouseY, _activeScene.eraserSize, _activeScene.eraserSize);
-      text("Gomme / "+ _activeScene.eraserSize, 40, 80);
+      //text("Gomme / "+ _activeScene.eraserSize, 40, 80);
     }
     else {
       // pen mode
@@ -154,28 +146,32 @@ void draw() {
       stroke(_activeScene._penColor, 125);
       strokeWeight(1);
       ellipse(mouseX, mouseY, _activeScene.penSize, _activeScene.penSize);
-      text("Stylo / " + _activeScene.penSize, 40, 80);
+      //text("Stylo / " + _activeScene.penSize, 40, 80);
     }
   }
   // show drawing canvas to artist 
   // infos and user tools
   stroke(255);
   strokeWeight(1);
+  // show infos
   fill(255,0,0);
-  text(int(frameRate)+"fps", 40, 30);
-  text("layer :   " + _activeScene.gab, 40, 60);
-  text("resolution :   " + width + " / " + height, 40, 100);
-
+  text(_activeScene.gab, 20, 20);
   if (help == true) {
+    fill(0,0,0,255);
+    strokeWeight(0);
+    blendMode(BLEND);
+    rect(30, 30, 300, 290);
+    fill(255,0,0);
+    text(int(frameRate)+"fps", 40, 60);
+    text("resolution :   " + width + " / " + height, 40, 80);
     // show help :
-    float y = 130;
+    float y = 110;
     JSONArray help = loadJSONArray("data/help.json");  // help is loaded from json file
     text("help : ", 40, y);
     for (int o = 0; o < help.size(); o++){
       text(help.getString(o), 40, y+(o+1)*20);
     }
   }
-
   if (drawCursorPos == true) {
     line(0, mouseY, width, mouseY); // y
     line(mouseX, 0, mouseX, height); // x

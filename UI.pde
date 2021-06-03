@@ -1,6 +1,7 @@
 boolean controlDown = false;
 boolean shiftDown = false;
 boolean commandDown = false;
+boolean showGab = false;
 
 void keyPressed() {
   switch(keyCode) {
@@ -34,11 +35,16 @@ void keyPressed() {
       case 's' :
         savePresets();
         break;
+      case 'g' :
+        showGab = !showGab;
+        break;
     }
     return;
   }
   else {
     // check if user wants to change of drawing preset
+    /*
+    // the use of keyboard button for Scene selection is disabled if this block is commented
     for (Scene d : scenes){
       if (d.k == key) {
         _activeScene = d;
@@ -46,6 +52,7 @@ void keyPressed() {
         break;
       }
     }
+    */
    switch(key) {
       case 'g':
         gomme = !gomme;
