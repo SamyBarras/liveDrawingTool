@@ -227,6 +227,22 @@
     },
     {
       "button": {
+        "num": 38,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "name": "511",
+      "gab": "",
+      "bg" : "",
+      "key": ""
+    },
+    {
+      "button": {
         "num": 16,
         "channel": 0,
         "error": 4,
@@ -477,9 +493,9 @@
         "num": 51,
         "channel": 0,
         "error": 4,
-        "off": 0,
+        "off": 5,
         "status": 144,
-        "on": 2
+        "on": 6
       },
       "default": false,
       "name": "bus-pause",
@@ -491,9 +507,9 @@
         "num": 43,
         "channel": 0,
         "error": 4,
-        "off": 0,
+        "off": 5,
         "status": 144,
-        "on": 2
+        "on": 6
       },
       "default": false,
       "name": "bus-play",
