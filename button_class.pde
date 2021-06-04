@@ -48,8 +48,10 @@ class Button {
     data = _v;
     // update buttons color
     updatePad(onColor);
-    for (Button _b : buttons){
-      if (_b.type.matches(type) && _b.status == status && _b.num != num) _b.updatePad(_b.offColor);
+    for (Button _b : buttons) {
+      if (_b.type.matches(type)) {
+        if (_b.num != num) { _b.updatePad(_b.offColor); }
+      }
     }
     
     if (type.matches("scene")) {

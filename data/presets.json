@@ -62,7 +62,7 @@
       "eraserSize": 20,
       "name": "4",
       "gab": "20210531_GAB2_01",
-      "bg" : "",
+      "bg" : "bus.jpg",
       "key": "r"
     },
     {
@@ -227,38 +227,6 @@
     },
     {
       "button": {
-        "num": 38,
-        "channel": 0,
-        "error": 4,
-        "off": 5,
-        "status": 144,
-        "on": 1
-      },
-      "penSize": 2,
-      "eraserSize": 20,
-      "name": "511",
-      "gab": "",
-      "bg" : "",
-      "key": ""
-    },
-    {
-      "button": {
-        "num": 39,
-        "channel": 0,
-        "error": 4,
-        "off": 5,
-        "status": 144,
-        "on": 1
-      },
-      "penSize": 2,
-      "eraserSize": 20,
-      "name": "512",
-      "gab": "",
-      "bg" : "",
-      "key": ""
-    },
-    {
-      "button": {
         "num": 16,
         "channel": 0,
         "error": 4,
@@ -316,8 +284,8 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "9",
-      "gab": "20210531_GAB4_01",
+      "name": "placeur",
+      "gab": "gab_placeur",
       "bg" : "",
       "key": "o"
     },
@@ -531,6 +499,34 @@
       "name": "bus-play",
       "type": "bus-ctrl",
       "key": "p"
+    },
+    {
+      "button": {
+        "num": 48,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 6
+      },
+      "default": false,
+      "name": "homme-grenouille-show",
+      "type": "homme-grenouille-show",
+      "key": ""
+    },
+    {
+      "button": {
+        "num": 40,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 6
+      },
+      "default": false,
+      "name": "homme-grenouille-hide",
+      "type": "homme-grenouille-hide",
+      "key": ""
     }
   ]
 }
