@@ -10,11 +10,11 @@
         "on": 1
       },
       "default": true,
-      "penSize": 9,
-      "eraserSize": 5,
+      "penSize": 3,
+      "eraserSize": 32,
+      "bg": "ville.jpg",
       "name": "1",
       "gab": "20210531_GAB1_01",
-      "bg" : "ville.jpg",
       "key": "a"
     },
     {
@@ -28,9 +28,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "2",
       "gab": "",
-      "bg" : "",
       "key": "z"
     },
     {
@@ -44,9 +44,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
-      "name": "3",
-      "gab": "20210531_GAB1_01",
-      "bg" : "",
+      "bg": "",
+      "name": "marcheur",
+      "gab": "20210531_GAB4_01",
       "key": "e"
     },
     {
@@ -59,10 +59,10 @@
         "on": 1
       },
       "penSize": 2,
-      "eraserSize": 20,
+      "eraserSize": 5,
+      "bg": "bus.jpg",
       "name": "4",
       "gab": "20210531_GAB2_01",
-      "bg" : "bus.jpg",
       "key": "r"
     },
     {
@@ -76,9 +76,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "51",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -92,9 +92,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "52",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -108,9 +108,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "53",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -124,9 +124,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "54",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -140,9 +140,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "55",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -156,9 +156,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "56",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -172,9 +172,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "57",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -188,9 +188,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "58",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -204,9 +204,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "59",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -220,9 +220,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "510",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -236,9 +236,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "511",
       "gab": "",
-      "bg" : "",
       "key": ""
     },
     {
@@ -250,11 +250,11 @@
         "status": 144,
         "on": 1
       },
-      "penSize": 2,
-      "eraserSize": 20,
+      "penSize": 7,
+      "eraserSize": 82,
+      "bg": "",
       "name": "6",
-      "gab": "20210531_GAB3_01",
-      "bg" : "",
+      "gab": "20210531_GAB3_02",
       "key": "y"
     },
     {
@@ -268,9 +268,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "7",
       "gab": "",
-      "bg" : "",
       "key": "u"
     },
     {
@@ -284,9 +284,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "8",
       "gab": "",
-      "bg" : "",
       "key": "i"
     },
     {
@@ -300,9 +300,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "placeur",
       "gab": "gab_placeur",
-      "bg" : "",
       "key": "o"
     },
     {
@@ -316,9 +316,9 @@
       },
       "penSize": 2,
       "eraserSize": 5,
+      "bg": "",
       "name": "10",
       "gab": "20210531_GAB5_01",
-      "bg" : "",
       "key": "p"
     },
     {
@@ -332,9 +332,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "11",
       "gab": "",
-      "bg" : "",
       "key": "q"
     },
     {
@@ -348,9 +348,9 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "12",
       "gab": "",
-      "bg" : "",
       "key": "s"
     },
     {
@@ -364,10 +364,26 @@
       },
       "penSize": 2,
       "eraserSize": 20,
+      "bg": "",
       "name": "13",
       "gab": "",
-      "bg" : "",
       "key": "s"
+    },
+    {
+      "button": {
+        "num": 7,
+        "channel": 0,
+        "error": 4,
+        "off": 5,
+        "status": 144,
+        "on": 1
+      },
+      "penSize": 2,
+      "eraserSize": 20,
+      "bg": "",
+      "name": "thais",
+      "gab": "",
+      "key": ""
     }
   ],
   "tools": [
@@ -395,8 +411,8 @@
         "on": 1
       },
       "default": false,
-      "name": "save_button",
-      "type": "save"
+      "name": "save_scene",
+      "type": "save_scene"
     },
     {
       "button": {
@@ -410,6 +426,19 @@
       "default": false,
       "name": "clear_button",
       "type": "clear"
+    },
+    {
+      "button": {
+        "num": 85,
+        "channel": 0,
+        "error": 4,
+        "off": 1,
+        "status": 144,
+        "on": 1
+      },
+      "default": false,
+      "name": "save_presets",
+      "type": "save_presets"
     },
     {
       "button": {

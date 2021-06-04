@@ -80,8 +80,10 @@ class Button {
         case ("clear_button"):
           clearLayer();
           break;
-        case ("save_button"):
+        case ("save_scene"):
           saveScene();
+          break;
+        case ("save_presets"):
           savePresets();
           break;
         case ("ctrl-z"):

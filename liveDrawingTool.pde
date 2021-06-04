@@ -106,9 +106,9 @@ void draw() {
   // draw active scene layer
   if (_activeScene.hasGab) {
     // if active scene has gabarit, it means it has live drawing, so we draw and output to syphon
-    image(_activeScene.gabCanvas, 0, 0);
     _activeScene.drawer();
-    image(_activeScene.canvas,0,0);
+    image(_activeScene.canvas, 0, 0);
+    image(_activeScene.gabCanvas, 0, 0);
     // syphon output  
     if (syphonOutput == true) {
       // we store corresponding canvas in new clean PImage
