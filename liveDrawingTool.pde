@@ -8,7 +8,7 @@
   v2.4.2
 */
 
-boolean fullscreen = false;
+boolean fullscreen = true;
 boolean drawCursorPos = false;
 boolean gomme  = false;
 boolean help  = false;
