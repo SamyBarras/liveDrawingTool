@@ -366,7 +366,7 @@
       "eraserSize": 20,
       "bg": "",
       "name": "13",
-      "gab": "gab_thais",
+      "gab": "",
       "key": "s"
     },
     {
@@ -382,7 +382,7 @@
       "eraserSize": 20,
       "bg": "",
       "name": "thais",
-      "gab": "",
+      "gab": "gab_thais",
       "key": ""
     }
   ],
